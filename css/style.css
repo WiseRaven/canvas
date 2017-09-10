@@ -632,6 +632,16 @@ body {
     box-sizing: border-box;
 }
 
+.content-registration-artist .right_box .reg_right_title {
+    font-size: 48px;
+    line-height: 54px;
+    color: #2e3c54;
+    font-family: VAGRoundedLT, sans-serif;
+    margin-bottom: 40px;
+    text-align: left;
+    font-weight: bold;
+}
+
 .content-registration-artist .content-inner .section .right_box form {
     overflow: hidden;
     width: 100%;
@@ -727,6 +737,17 @@ body {
 .content-registration-artist .content-inner .section .right_box p a:hover {
     opacity: 0.5;
 }
+
+.content-registration-artist .right_box .sell_art {
+    display: block;
+    font-size: 14px;
+    font-family: VarelaRound-Regular, sans-serif;
+    margin-bottom: 25px;
+    color: #10a2ce;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 
 .content-registration-artist .content-inner .section .right_box form .submit {
     font-size: 10px;
@@ -3311,6 +3332,7 @@ input[type="checkbox"]:checked + label span {
 .card_pict_control .plus:after {
     position: absolute;
     content: "";
+    display: block;
     background-color: #fff;
     height: 9px; 
     width: 1px;
@@ -6247,7 +6269,7 @@ footer .bottom .development span {
         text-align: center;
         padding: 5px 20px 5px 20px;
     }
-    .content-registration-artist .content-inner .section .left_box .title {
+    .content-registration-artist .content-inner .section .left_box .title, .content-registration-artist .right_box .reg_right_title {
         text-align: center;
         margin-bottom: 40px;
     }
@@ -8357,7 +8379,7 @@ footer .bottom .development span {
     }
     /*		authorizathion.html - end     */
     /*		registration-artist.html    */
-    .content-registration-artist .content-inner .section .left_box .title {
+    .content-registration-artist .content-inner .section .left_box .title, .content-registration-artist .right_box .reg_right_title {
         font-size: 40px;
         line-height: 44px;
         margin-bottom: 30px;
