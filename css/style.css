@@ -1797,6 +1797,10 @@ body {
     transition: all 0.3s linear;
 }
 
+.basket_wrap .basket_hint .global-total-price {
+    display: inline-block;
+}
+
 .basket_wrap .basket_hint .go_to_cart {
     display: block;
     text-decoration: underline;

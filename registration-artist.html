@@ -54,6 +54,7 @@
                         </div>
                     </div>
                     <div class="right_box">
+                       <div class="reg_right_title">Apply Now</div>
                         <form action="" method="">
                             <div class="label">
                                 <label for="#name">Your name</label>
@@ -118,6 +119,7 @@
                             </div>
                             <!--			drug and drop - end				-->
                         <p>By submitting this application you acknowledge that you have read and agree to our <a href="#" class="user_agreement">User Agreement</a></p>
+                            <a href="#" class="sell_art">Sell your Art</a>
                             <input type="submit" value="SUBMIT" class="submit"> 
                         </form>
                     </div>
@@ -524,6 +526,18 @@
                 }
             })
         });
+    </script>
+    
+    <script>
+
+        var target_size = $(".section2").offset().top;
+
+        $(".sell_art").click(function() {
+            $('html, body').animate({
+                scrollTop: target_size
+            }, 1000);
+        });
+
     </script>
     
     <script>
