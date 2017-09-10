@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="Resource-type" content="Document" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=nо">
+    <title>Authorization</title>
+    <link rel="stylesheet" href="css/style.css"> </head>
+
+<body>
+    <div class="wrapper">
+        <header class="header-content">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="header-nav"> <a href="index.html#secondPage">Our quality</a> <a href="index.html#3rdPage">What we offer</a> <a href="index.html#4thPage">What sets us apart</a> <a href="contact-us.html">Contact</a> <a href="my-artworks.html"><i></i> My account</a> </div>
+            <div class="burger">
+                <!--	burger			-->
+                <nav class="navigation">
+                    <div class="hamburger" style="position: absolute;"> <span class="bars"></span> </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="my-artworks.html"><span></span>My account</a></li>
+                            <li><a href="index.html#section1">Our Quality</a></li>
+                            <li><a href="index.html#section2">What we offer</a></li>
+                            <li><a href="index.html#section3">What Sets Us Apart</a></li>
+                        </ul> <a href="contact-us.html" class="title">Contact</a> <a href="tel:0401 803 186" class="tel">0401 803 186</a>
+                        <form action=""> <a href="mailto:print@canvasprintstudio.com.au" class="mail">print@canvasprintstudio.com.au</a> </form>
+                    </div>
+                </nav>
+                <!--	burger - end			-->
+            </div>
+        </header>
+        <div class="content">
+            <div class="content-inner">
+                <div class="title">Welcome. Please Sign In</div>
+                <div class="section">
+                    <div class="left">
+                        <div class="left-title">New Artist</div>
+                        <div class="left-description">Welcome to the Canvas Print Studio Artist Gallery, a free online platform for artists to sell their work. Have your artwork publicised to a wider audience of industry professionals, online shoppers and art collectors. </div> <a href="registration-artist.html">REGISTER</a> </div>
+                    <div class="right">
+                        <form action="" method="">
+                            <div class="label">
+                                <label for="#mail">Email</label>
+                                <label for="#password">Password</label>
+                            </div>
+                            <div class="input">
+                                <input type="email" id="mail" required>
+                                <input type="password" id="password" required> </div>
+                            <button type="submit">LOG IN</button>
+                            <a href="" class="forgot">Forgot password?</a> </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        jQuery(function ($) {
+            $(".hamburger").click(function () {
+                $(".navigation").toggleClass("open");
+                if ($("nav").hasClass("open")) {
+                    $(".hamburger").css("position", "fixed");
+                }
+                else {
+                    $(".hamburger").css("position", "absolute");
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

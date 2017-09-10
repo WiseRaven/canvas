@@ -1,0 +1,11 @@
+/*
+ *
+ * Normal
+ *
+ */
+
+.normal img {
+    width: 100%;
+    z-index: 1; 
+}
+ 

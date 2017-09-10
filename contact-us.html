@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="Resource-type" content="Document" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=nо">
+    <title>Contact us</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" /> </head>
+
+<body>
+    <div class="wrapper">
+        <header class="header-content">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="header-nav"> <a href="index.html#secondPage">Our quality</a> <a href="index.html#3rdPage">What we offer</a> <a href="index.html#4thPage">What sets us apart</a> <a href="contact-us.html">Contact</a> <a href="my-artworks.html"><i></i> My account</a> </div>
+            <div class="burger">
+                <!--	burger			-->
+                <nav class="navigation">
+                    <div class="hamburger" style="position: absolute;"> <span class="bars"></span> </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="my-artworks.html"><span></span>My account</a></li>
+                            <li><a href="index.html#section1">Our Quality</a></li>
+                            <li><a href="index.html#section2">What we offer</a></li>
+                            <li><a href="index.html#section3">What Sets Us Apart</a></li>
+                        </ul> <a href="contact-us.html" class="title">Contact</a> <a href="tel:0401 803 186" class="tel">0401 803 186</a>
+                        <form action=""> <a href="mailto:print@canvasprintstudio.com.au" class="mail">print@canvasprintstudio.com.au</a> </form>
+                    </div>
+                </nav>
+                <!--	burger - end			-->
+            </div>
+        </header>
+        <div class="contact-section">
+            <div class="left">
+                <div class="title">Contact us</div>
+                <form action="" method="">
+                    <div class="label">
+                        <label for="#name">Name</label>
+                        <label for="#mail">Email</label>
+                        <label for="#phone">Phone</label>
+                    </div>
+                    <div class="input">
+                        <input type="text" id="name" placeholder="First and Last name" required>
+                        <input type="email" id="mail" required>
+                        <input type="tel" id="phone" required> </div>
+                    <div class="checkbox_group">
+                        <div class="checkbox_item">
+                            <input type="checkbox" id="c1" name="cc" />
+                            <label for="c1"> <span></span> Review my image </label>
+                        </div>
+                        <div class="checkbox_item">
+                            <input type="checkbox" id="c2" name="cc" />
+                            <label for="c2"> <span></span> Commercial printing </label>
+                        </div>
+                        <div class="checkbox_item">
+                            <input type="checkbox" id="c3" name="cc" />
+                            <label for="c3"> <span></span> Custom size </label>
+                        </div>
+                        <div class="checkbox_item">
+                            <input type="checkbox" id="c4" name="cc" />
+                            <label for="c4"> <span></span> Other </label>
+                        </div>
+                    </div>
+                    <textarea name="" id="" placeholder="Message"></textarea>
+                    <div class="fileform"> Attach file
+                        <input id="upload" type="file" name="upload"> </div>
+                    <input type="submit" value="Send"> </form>
+                <div class="bottom-info">
+                    <div class="info info-left">
+                        <div class="text">255-259 Johnston St Abbotsford, VIC 3067 </div>
+                        <div class="text">0401 803 186</div> <a href="mailto:print@canvasprintstudio.com.au">
+                            print@canvasprintstudio.com.au
+                        </a> </div>
+                    <div class="info info-right"> <img src="img/contact.png" alt=""> </div>
+                </div>
+            </div>
+            <div class="right">
+                <!--              id="map"-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224327.0232540756!2d76.90050809789874!3d28.536421084330197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d582e38859%3A0x2cf5fe8e5c64b1e!2z0JPRg9GA0LPQsNC-0L0sINCl0LDRgNGM0Y_QvdCwLCDQmNC90LTQuNGP!5e0!3m2!1sru!2sua!4v1480778990938" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        jQuery(function ($) {
+            $(".hamburger").click(function () {
+                $(".navigation").toggleClass("open");
+                if ($("nav").hasClass("open")) {
+                    $(".hamburger").css("position", "fixed");
+                }
+                else {
+                    $(".hamburger").css("position", "absolute");
+                }
+            })
+        });
+    </script>
+    <!--   <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&signed_in=true&callback=initMap">
+    </script>
+  
+    <script>
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: {lat: -33, lng: 151}
+          });
+
+          var image = 'img/marker.png';
+          var beachMarker = new google.maps.Marker({
+            position: {lat: -33.890, lng: 151.274},
+            map: map,
+            icon: image
+          });
+        }
+    </script>  -->
+</body>
+
+</html>

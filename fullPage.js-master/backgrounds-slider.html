@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Background images - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen backgrounds." />
+	<meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples/examples.css" />
+
+	<style>
+		.section {
+			text-align: left;
+		}
+		/* Backgrounds will cover all the section
+	* --------------------------------------- */
+		
+		.section {
+			background-size: cover;
+		}
+		
+		.slide {
+			background-size: cover;
+			position: relative;
+		}
+		/* Defining each section background and styles
+	* --------------------------------------- */
+		/*Adding background for the slides
+	* --------------------------------------- */
+		
+		@font-face {
+			font-family: VarelaRound-Regular;
+			src: url(../fonts/VarelaRound-Regular.otf);
+			font-family: VAGRoundedLT;
+			src: url(../fonts/VAG-Rounded-Bold.ttf);
+		}
+		
+		#slide1 {
+			background-image: url(../img/slide1.jpg);
+		}
+		
+		#slide2 {
+			background-image: url(../img/slide2.png);
+		}
+		
+		#slide3 {
+			background-image: url(../img/slide2.png);
+		}
+		
+		#slide4 {
+			background-image: url(../img/slide2.png);
+		}
+		/*	* --------------------------------------- */
+		
+		header {
+			width: 100%;
+			overflow: hidden;
+			border-bottom: 2px dashed #f8f8f8;
+			position: relative;
+		}
+		
+		header .logo {
+			float: left;
+			margin: 5px 0 5px 52px;
+		}
+		/* burger */
+		
+		.hamburger {
+			position: fixed;
+			right: 0;
+			cursor: pointer;
+			z-index: 1000;
+			padding: 52px 50px;
+		}
+		
+		.hamburger span {
+			vertical-align: middle;
+		}
+		
+		.hamburger .bars {
+			display: block;
+			position: relative;
+			width: 30px;
+			height: 3px;
+			background-color: #2e3c54;
+			-webkit-transition: all 0.2s ease;
+			transition: all 0.2s ease;
+		}
+		
+		.hamburger .bars:before,
+		.hamburger .bars:after {
+			position: absolute;
+			content: " ";
+			width: 100%;
+			height: 3px;
+			background-color: #2e3c54;
+			-webkit-transition: all 0.2s ease;
+			transition: all 0.2s ease;
+		}
+		
+		.hamburger .bars:before {
+			top: 8px;
+		}
+		
+		.hamburger .bars:after {
+			bottom: 8px;
+		}
+		
+		.open .hamburger .bars {
+			background-color: transparent;
+			-webkit-transition: all 0.2s ease;
+			transition: all 0.2s ease;
+		}
+		
+		.open .hamburger .bars::before {
+			top: 0;
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+		
+		.open .hamburger .bars::after {
+			bottom: 0;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		
+		.menu {
+			width: 220px;
+			height: 100%;
+			padding: 115px 60px 0px 40px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+			position: fixed;
+			right: -100%;
+			top: 0;
+			opacity: 0;
+			z-index: 999;
+			margin-top: 0;
+			-webkit-transition: all 0.2s ease;
+			transition: all 0.2s ease;
+			background: #fff;
+		}
+		
+		.menu ul {
+			margin-bottom: 53px;
+		}
+		
+		.menu li:first-child a {
+			font-size: 14px;
+			font-family: VarelaRound-Regular, sans-serif;
+			margin-bottom: 25px;
+			color: #989da6;
+			text-decoration: none;
+			display: block;
+		}
+		
+		.menu li:first-child a span {
+			background: url(../img/login-icon.png) no-repeat;
+			background-size: contain;
+			width: 16px;
+			height: 17px;
+			display: inline-block;
+			margin-right: 8px;
+		}
+		
+		.menu a {
+			font-family: VarelaRound-Regular, sans-serif;
+			color: #2e3c54;
+			font-size: 18px;
+			line-height: 29px;
+		}
+		
+		.menu a:hover {
+			text-decoration: underline;
+		}
+		
+		.menu .title {
+			margin-bottom: 14px;
+			color: #abafb6;
+			font-size: 14px;
+			font-family: VarelaRound-Regular, sans-serif;
+		}
+		
+		.menu .tel {
+			font-family: VarelaRound-Regular, sans-serif;
+			font-size: 14px;
+			color: #2e3c54;
+			margin-bottom: 12px;
+		}
+		
+		.menu .mail {
+			font-family: VarelaRound-Regular, sans-serif;
+			font-size: 14px;
+			color: #2e3c54;
+			text-decoration: underline;
+		}
+		
+		.open .menu {
+			right: 0;
+			opacity: 1;
+			-webkit-transition: all 0.2s ease;
+			transition: all 0.2s ease;
+		}
+		
+		.menu:hover {
+			overflow-y: auto;
+		}
+		/* burger - end */
+		/*		*/
+		
+		.slide .right-colmn {
+			position: absolute;
+			/*			width: 600px;*/
+			width: 31.273%;
+			height: calc(100% - 100px);
+			/*			margin-top: 100px;*/
+			background: transparent;
+			/*			border-top: 1px solid #e2e2e2;*/
+			right: 0;
+			top: 0;
+			font-size: 48px;
+			color: #052d39;
+			font-family: VAGRoundedLT, sans-serif;
+		}
+		
+		.slide .right-colmn .title {
+			padding: 87px 130px 90px 55px;
+			font-size: 48px;
+			color: #052d39;
+			font-family: VAGRoundedLT, sans-serif;
+			background: #fff;
+		}
+		
+		.slide .right-colmn .number {
+			padding: 0 135px 40px 55px;
+			font-size: 240px;
+			font-weight: bold;
+			/*			color: #052d39;*/
+			color: initial;
+			font-family: VAGRoundedLT, sans-serif;
+			mix-blend-mode: screen;
+			margin-top: -1px;
+			background: #fff;
+		}
+		
+		.slide .right-colmn .description .text-head {
+			font-size: 22px;
+			color: #052d39;
+			font-family: VarelaRound-Regular, sans-serif;
+			margin-bottom: 15px;
+			background: #fff;
+		}
+		
+		.slide .right-colmn .description {
+			padding: 0 135px 10px 55px;
+			font-size: 14px;
+			color: #052d39;
+			font-family: VarelaRound-Regular, sans-serif;
+			line-height: 22px;
+			height: 100%;
+			margin-top: -1px;
+			background: #fff;
+		}
+		
+		.fp-controlArrow {
+			opacity: 0.4;
+		}
+		
+		.fp-controlArrow:hover {
+			opacity: 1;
+		}
+		
+		.fp-controlArrow.fp-prev {
+			left: auto;
+			top: auto;
+			width: 0;
+			border-width: 15px 34px 15px 0;
+			border-color: transparent;
+			background: url(../img/arrow-l.png) no-repeat 4px -10px;
+			/*			right: 510px;*/
+			right: 27%;
+			bottom: 12%;
+		}
+		
+		.fp-controlArrow.fp-next {
+			left: auto;
+			top: auto;
+			width: 0;
+			border-width: 15px 34px 15px 0;
+			border-color: transparent;
+			background: url(../img/arrow-r.png) no-repeat 4px -10px;
+			/*			right: 445px;*/
+			right: 23%;
+			bottom: 12%;
+		}
+		/*		*/
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples/examples.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#fullpage').fullpage({
+				verticalCentered: false
+
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+
+
+	<div id="fullpage">
+
+		<div class="section" id="section1">
+			<header>
+				<div class="logo">
+					<a href=""><img src="../img/logo.png" alt=""></a>
+				</div>
+				<div class="burger">
+					<!--	burger			-->
+					<nav class="navigation">
+						<div class="hamburger">
+							<span class="bars"></span>
+						</div>
+						<div class="menu">
+							<ul>
+								<li><a href=""><span></span>My account</a></li>
+								<li><a href="">How We Achieve Quality</a></li>
+								<li class="sub-menu"><a href="">Print Your Own</a></li>
+								<li><a href="">Commercial Printing</a></li>
+								<li><a href="">Print from Our Gallery</a></li>
+								<li><a href="">Contact Us</a></li>
+							</ul>
+							<div class="title">Contact Us</div>
+							<div class="tel">0401 803 186</div>
+							<div class="mail">print@canvasprintstudio.com.au</div>
+						</div>
+					</nav>
+					<!--	burger - end			-->
+				</div>
+			</header>
+
+			<div class="slide" id="slide1">
+				<div class="right-colmn">
+					<div class="title">
+						How is our quality achieved?
+					</div>
+					<div class="number">
+						01
+					</div>
+
+					<div class="description">
+						<div class="text-head">Digitally Preparing Images</div>
+						We review and digitally prepare each image to guarantee you receive the best result. At no extra cost we can improve image resolution, colour, contrast and provide basic retouching.
+					</div>
+				</div>
+
+			</div>
+			<div class="slide" id="slide2">
+				<div class="right-colmn">
+					<div class="title">
+						How do we achieve such quality?
+					</div>
+					<div class="number">
+						02
+					</div>
+
+					<div class="description">
+						<div class="text-head">Premium Materials</div>
+						Our premium archival canvas and genuine Canon inks will ensure your print is visually superior to other canvas prints
+					</div>
+				</div>
+			</div>
+			<div class="slide" id="slide3">
+				<div class="right-colmn">
+					<div class="title">
+						How do we achieve such quality?
+					</div>
+					<div class="number">
+						03
+					</div>
+
+					<div class="description">
+						<div class="text-head">UV Protective Coating</div>
+						Every print is carefully sprayed with a UV matte protective laminate, ensuring they are fade-resistant, durable and easy to clean
+					</div>
+				</div>
+			</div>
+			<div class="slide" id="slide4">
+				<div class="right-colmn">
+					<div class="title">
+						How do we achieve such quality?
+					</div>
+					<div class="number">
+						04
+					</div>
+
+					<div class="description">
+						<div class="text-head">Hand Crafted</div>
+						Unlike many common canvas printers, our prints are precisely stretched by hand with expertise and care. Each frame is custom made using kiln-dried timber stretcher bars, sourced from sustainable regrowth forests
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			jQuery(function ($) {
+				$(".hamburger").click(function () {
+					$(".navigation").toggleClass("open");
+				})
+				$(".fp-controlArrow").click(function () {
+					$(".fp-controlArrow").hide(0).delay(800).show(0);
+				})
+			});
+		</script>
+
+</body>
+
+</html>
